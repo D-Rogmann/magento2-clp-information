@@ -1,0 +1,43 @@
+﻿<?php
+/** @var \DRogmann\ClpInformation\Block\Product\View\ClpInformation $block */
+?>
+<div class="clp-information-block">
+    <h3 class="clp-title"><?= $block->escapeHtml(__('Gefahrstoffinformationen (CLP)')) ?></h3>
+
+    <?php if ($signal = $block->getSignalWord()): ?>
+        <div class="clp-signal-word">
+            <strong><?= $block->escapeHtml($signal) ?></strong>
+        </div>
+    <?php endif; ?>
+
+    <?php $h = $block->getHPhrases(); $p = $block->getPPhrases(); ?>
+    <?php if (!empty($h) || !empty($p)): ?>
+        <div class="clp-phrases">
+            <?php if (!empty($h)): ?>
+                <div class="h-phrases">
+                    <h4><?= $block->escapeHtml(__('Gefahrenhinweise')) ?></h4>
+                    <ul class="phrases-list">
+                        <?php foreach ($h as $item): ?>
+                            <li class="phrase-item h-phrase">
+                                <span class="phrase-text"><?= $block->escapeHtml($item) ?></span>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+
+            <?php if (!empty($p)): ?>
+                <div class="p-phrases">
+                    <h4><?= $block->escapeHtml(__('Sicherheitshinweise')) ?></h4>
+                    <ul class="phrases-list">
+                        <?php foreach ($p as $item): ?>
+                            <li class="phrase-item p-phrase">
+                                <span class="phrase-text"><?= $block->escapeHtml($item) ?></span>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
+</div>

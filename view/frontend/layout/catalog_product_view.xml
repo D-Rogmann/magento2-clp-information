@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="DRogmann_ClpInformation::css/clp-styles.css"/>
+    </head>
+    <body>
+        <referenceContainer name="product.info.main">
+            <block class="DRogmann\\ClpInformation\\Block\\Product\\View\\ClpInformation"
+                   name="clp.information"
+                   template="DRogmann_ClpInformation::product/view/clp_information.phtml"
+                   after="-"/>
+        </referenceContainer>
+    </body>
+</page>

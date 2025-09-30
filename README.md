@@ -22,7 +22,7 @@ A professional Magento 2 module that displays CLP (Classification, Labelling and
 
 ```bash
 composer require yourcompany/magento2-clp-information
-php bin/magento module:enable YourCompany_ClpInformation
+php bin/magento module:enable DRogmann_ClpInformation
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento cache:flush
@@ -30,7 +30,7 @@ php bin/magento cache:flush
 
 ### Manual Installation
 
-1. Download and extract the module to `app/code/YourCompany/ClpInformation`
+1. Download and extract the module to `app/code/DRogmann/ClpInformation`
 2. Run the installation commands above
 
 ## ⚙️ Configuration
@@ -60,7 +60,7 @@ The CLP information block will automatically appear on product detail pages for 
 
 Copy the template file to your theme:
 ```
-app/design/frontend/[Vendor]/[Theme]/YourCompany_ClpInformation/templates/product/view/clp_information.phtml
+app/design/frontend/[Vendor]/[Theme]/DRogmann_ClpInformation/templates/product/view/clp_information.phtml
 ```
 
 ### CSS Customization
@@ -116,7 +116,7 @@ Extend the source models in:
 
 Run unit tests:
 ```bash
-php bin/magento dev:tests:run unit YourCompany_ClpInformation
+php bin/magento dev:tests:run unit DRogmann_ClpInformation
 ```
 
 ## 🤝 Contributing
