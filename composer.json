@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "drogmann/magento2-clp-information",
   "description": "Magento 2 module to display CLP (Classification, Labelling and Packaging) information on product pages.",
   "type": "magento2-module",
@@ -13,7 +13,7 @@
   ],
   "require": {
     "php": ">=8.1",
-    "magento/framework": ">=103.0.0",
+    "magento/framework": "*",
     "magento/module-catalog": ">=104.0.0"
   },
   "autoload": {
